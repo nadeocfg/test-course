@@ -1,4 +1,4 @@
-const validateValue = (value) => {
+const validateValue = (value: number) => {
   const formattedValue = value ?? undefined === undefined;
 
   if (formattedValue === undefined || typeof value !== "number") {
