@@ -11,6 +11,7 @@ describe("Get square of value", () => {
   });
 
   test("Should return 0", () => {
+    // @ts-ignore
     expect(getSquare("Wrong type")).toEqual(0);
   });
 

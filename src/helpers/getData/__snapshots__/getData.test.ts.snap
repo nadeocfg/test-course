@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Getting data from axios Should return list of users 1`] = `
+[
+  "1",
+  "2",
+  "3",
+]
+`;

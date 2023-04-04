@@ -17,6 +17,7 @@ describe("Validate value helper", () => {
     expect(validateValue(101)).toBe(false);
   });
   test("Should return false for not numeric value", () => {
+    // @ts-ignore
     expect(validateValue("Wrong type")).toBe(false);
   });
   test("Should return false for undefined value", () => {

@@ -1,7 +1,7 @@
 import axios from "axios";
 import getData from "./getData";
 
-const mockedAxios = jest.mock("axios");
+jest.mock("axios");
 
 describe("Getting data from axios", () => {
   let response = {};
@@ -83,10 +83,16 @@ describe("Getting data from axios", () => {
   });
 
   test("Should return list of users", async () => {
-    mockedAxios;
+    // @ts-ignore
     axios.get.mockReturnValue(response);
     const data = await getData();
 
     expect(axios.get).toBeCalledTimes(1);
+    expect(data).toEqual(["1", "2", "3"]);
+    expect(data).toMatchSnapshot();
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
   });
 });

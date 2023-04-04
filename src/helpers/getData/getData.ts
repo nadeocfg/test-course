@@ -6,7 +6,7 @@ const getData = async () => {
     const { data } = await axios.get(
       "https://jsonplaceholder.typicode.com/users"
     );
-    const userIds = data.map((item) => item.id);
+    const userIds = data.map((item: any) => item.id);
 
     return mapArrToStrings(userIds);
   } catch (error) {
