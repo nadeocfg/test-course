@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Users from "./components/Users/Users";
 
 const App = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -38,6 +39,10 @@ const App = () => {
       />
 
       <h2 data-testid="header">{header}</h2>
+
+      <hr />
+
+      <Users />
     </main>
   );
 };
